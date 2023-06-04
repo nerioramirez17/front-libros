@@ -1,7 +1,7 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react'
-import { TextField, InputAdornment } from '@mui/material';
+import { InputAdornment } from '@mui/material';
 import { Search as SearchIcon } from '@mui/icons-material';
-import styled from 'styled-components';
+import { CustomInput } from './search.styles'
 
 
 type SearchProps = {
@@ -9,20 +9,9 @@ type SearchProps = {
   setSearch: any
 };
 
-const CustomInput = styled(TextField)`
-  background-color: white;
-  color: black;
-  margin-bottom: 120px;
-  border-radius: 10px;
-
-  & input {
-    color: black;
-  }
-`;
 
 const Search: React.FC<SearchProps> = ({  search, setSearch }) => {
   const [searchParam, setSearchParam] = useState(search)
-
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchParam(event.target.value);
   }

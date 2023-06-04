@@ -16,7 +16,7 @@ const ModalComponent: React.FC<{ openModal: boolean, setOpenModal: Dispatch<SetS
         <BoxModal color="black">
           <Image src={book?.cover_i ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg` : '/book.jpg'} width={190} height={190} alt='img' />
           <Typography>{book?.title}</Typography>
-          <Typography>Year: {concatData(book.publish_year)}</Typography>
+          <Typography>Year: {concatData(book?.publish_year)}</Typography>
           <Typography>Aqui deberia ir una descripcion del libro</Typography>
           <Typography>Aqui deberia ir una descripcion del autor</Typography>
         </BoxModal>
